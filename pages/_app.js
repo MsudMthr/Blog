@@ -2,7 +2,6 @@ import "../styles/globals.css";
 import "../styles/font.css";
 
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
-import Header from "../src/components/Header";
 import { ThemeProvider } from "@mui/material";
 import theme from "../src/mui/theme";
 
@@ -15,9 +14,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <ApolloProvider client={client}>
       <ThemeProvider theme={theme}>
-        <Header>
-          <Component {...pageProps} />
-        </Header>
+        <Component {...pageProps} />
       </ThemeProvider>
     </ApolloProvider>
   );
