@@ -4,7 +4,7 @@ import { Facebook } from '@mui/icons-material';
 import { Twitter } from '@mui/icons-material';
 const Network = () => {
     return (
-        <div className="flex flex-col invert gap-5 items-center">
+        <div className="flex flex-col invert gap-5 items-center ml-20 mt-5">
             <Instagram />
             <Facebook />
             <Twitter />
