@@ -1,5 +1,16 @@
 .header-background {
-  background: url("../src/assets/d9b5cd8368a440fd79f3cb155b4a6112.jpg")
-    center no-repeat;
+  background: url("../src/assets/d9b5cd8368a440fd79f3cb155b4a6112.jpg") center
+    no-repeat;
   background-size: cover;
+}
+
+.header-background::after {
+  content: "";
+  position: absolute;
+  height: 70%;
+  background: rgba(0, 0, 0, 0.414);
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
