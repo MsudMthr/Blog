@@ -16,10 +16,10 @@ export default function Home({ blogs }) {
 }
 
 export async function getStaticProps() {
-  const { data } = await client.query({query : GET_ALL_BLOGS});
+  const response = await client.query({query : GET_ALL_BLOGS});
   return {
     props: {
-      blogs: data.posts,
+      blogs: response.data.posts,
     },
   };
 }
