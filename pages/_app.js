@@ -4,11 +4,13 @@ import "../styles/font.css";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import { ThemeProvider } from "@mui/material";
 import theme from "../src/mui/theme";
-
+// create apollo provider
 export const client = new ApolloClient({
   uri: process.env.NEXT_PUBLIC_GRAPHCMS_URI,
   cache: new InMemoryCache(),
 });
+
+
 
 function MyApp({ Component, pageProps }) {
   return (

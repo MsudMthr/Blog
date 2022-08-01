@@ -8,7 +8,7 @@ const Network = () => {
       <Instagram />
       <Facebook />
       <Twitter />
-      <div className="w-0.5 h-40 bg-[#000] hidden md:block"></div>
+      <div className="w-0.5 h-36 bg-[#000] hidden md:block"></div>
     </div>
   );
 };

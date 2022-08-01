@@ -5,8 +5,8 @@ import { GET_ALL_BLOGS } from "../src/graphQl/queries";
 import { ApolloClient } from "@apollo/client/core";
 import { client } from "./_app";
 
+
 export default function Home({ blogs }) {
-  console.log(blogs);
   return (
     <div className={""}>
       <Header />

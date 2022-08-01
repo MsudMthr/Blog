@@ -2,11 +2,12 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-};
-module.exports = {
   i18n: {
     locales: ["fa"],
     defaultLocale: "fa",
+  },
+  images: {
+    domains: ['media.graphcms.com','media.graphassets.com'],
   },
 };
 

@@ -7,15 +7,15 @@ const GET_ALL_BLOGS = gql`
       title
       coverPhoto {
         url
-        avatarAuthor {
-          avatar {
-            url
-          }
-        }
       }
       id
+      author
+      published_time
+      text {
+        text
+      }
     }
   }
 `;
 
-export {GET_ALL_BLOGS}
+export { GET_ALL_BLOGS };
