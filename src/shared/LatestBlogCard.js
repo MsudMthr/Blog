@@ -24,12 +24,12 @@ const LatestBlogCard = ({ blogData }) => {
         height={"200"}
         className="rounded-sm"
       />
-      <h3 className="text-xl font-bold text-justify ">{title}</h3>
+      <h3 className="text-xl font-bold text-justify  text-dark ">{title}</h3>
       <div className="flex gap-2 justify-start flex-row-reverse">
-        <p className="font-thin">{dateSplitter(published_time)} </p>
-        <p className="ml-2 hover:text-cyan-600 cursor-pointer"> {author}</p>
+        <p className="font-thin text-dark ">{dateSplitter(published_time)} </p>
+        <p className="ml-2 hover:text-cyan-600 cursor-pointer text-dark "> {author}</p>
       </div>
-      <p className="text-justify ">{textShorter(text.text)} ...</p>
+      <p className="text-justify  text-dark ">{textShorter(text.text)} ...</p>
     </div>
   );
 };

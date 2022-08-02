@@ -5,16 +5,16 @@ const Navbar = () => {
   return (
     <div className="pt-4 md:flex items-center justify-between w-80 z-50 hidden ">
       <Link href={"#"}>
-        <a className="px-2 py-1 text-white drop-shadow-xl">خانه</a>
+        <a className="px-2 py-1 text-milkyWhite drop-shadow-xl">خانه</a>
       </Link>
       <Link href={"#"}>
-        <a className="px-2 py-1 text-white drop-shadow-xl">مقالات</a>
+        <a className="px-2 py-1 text-milkyWhite drop-shadow-xl">مقالات</a>
       </Link>
       <Link href={"#"}>
-        <a className="px-2 py-1 text-white drop-shadow-xl">نویسنده ها</a>
+        <a className="px-2 py-1 text-milkyWhite drop-shadow-xl">نویسنده ها</a>
       </Link>
       <Link href={"#"}>
-        <a className="px-2 py-1 text-white drop-shadow-xl">دسته بندی ها</a>
+        <a className="px-2 py-1 text-milkyWhite drop-shadow-xl">دسته بندی ها</a>
       </Link>
     </div>
   );

@@ -1087,27 +1087,27 @@ d="M53 1zM423 189l-21 -46l-328 178v52l328 179l21 -47l-299 -158zM53 1v48h402v-48h
 d="M53 1zM67.0244 189l20.999 -46l327.979 178v52l-327.979 179l-20.999 -47l298.981 -158zM53 1v48h402v-48h-402z" />
     <glyph glyph-name="black_small_square" unicode="&#x25aa;" horiz-adv-x="365" 
 d="M313 260v-260h-260v260h260z" />
-    <glyph glyph-name="white_small_square" unicode="&#x25ab;" horiz-adv-x="365" 
+    <glyph glyph-name="milkyWhite_small_square" unicode="&#x25ab;" horiz-adv-x="365" 
 d="M313 260v-260h-260v260h260zM98 46h169v164h-169v-164z" />
     <glyph glyph-name="black_upsmall_triangle" unicode="&#x25b4;" horiz-adv-x="444" 
 d="M392 0h-339l169 294z" />
-    <glyph glyph-name="white_upsmall_triangle" unicode="&#x25b5;" horiz-adv-x="444" 
+    <glyph glyph-name="milkyWhite_upsmall_triangle" unicode="&#x25b5;" horiz-adv-x="444" 
 d="M392 0h-339l169 294zM121 41h199l-99 177z" />
     <glyph glyph-name="black_rightsmall_triangle" unicode="&#x25b8;" horiz-adv-x="400" 
 d="M53 -7v339l295 -169z" />
-    <glyph glyph-name="white_rightsmall_triangle" unicode="&#x25b9;" horiz-adv-x="399" 
+    <glyph glyph-name="milkyWhite_rightsmall_triangle" unicode="&#x25b9;" horiz-adv-x="399" 
 d="M347 163l-294 -170v339zM268 163l-175 99v-199z" />
     <glyph glyph-name="black_downsmall_triangle" unicode="&#x25be;" horiz-adv-x="444" 
 d="M53 287h339l-170 -294z" />
-    <glyph glyph-name="white_downsmall_triangle" unicode="&#x25bf;" horiz-adv-x="444" 
+    <glyph glyph-name="milkyWhite_downsmall_triangle" unicode="&#x25bf;" horiz-adv-x="444" 
 d="M392 287l-170 -294l-169 294h339zM221 70l99 176h-199z" />
     <glyph glyph-name="black_leftsmall_triangle" unicode="&#x25c2;" horiz-adv-x="399" 
 d="M347 332v-339l-294 170z" />
-    <glyph glyph-name="white_leftsmall_triangle" unicode="&#x25c3;" horiz-adv-x="399" 
+    <glyph glyph-name="milkyWhite_leftsmall_triangle" unicode="&#x25c3;" horiz-adv-x="399" 
 d="M347 332v-339l-294 170zM305 63v199l-175 -99z" />
     <glyph glyph-name="dotted.ring" unicode="&#x25cc;" horiz-adv-x="636" 
 d="M181 87h87v-87h-87v87zM368 87h87v-87h-87v87zM181 484h87v-87h-87v87zM368 484h87v-87h-87v87zM496 285h87v-86h-87v86zM53 285h86v-86h-86v86z" />
-    <glyph glyph-name="white_bullet" unicode="&#x25e6;" horiz-adv-x="397" 
+    <glyph glyph-name="milkyWhite_bullet" unicode="&#x25e6;" horiz-adv-x="397" 
 d="M53 145q0 30 11.5 57t31 46.5t46 31t56.5 11.5t56.5 -11.5t46.5 -31t31.5 -46.5t11.5 -57t-11.5 -56.5t-31.5 -46t-46.5 -31t-56.5 -11.5t-56.5 11.5t-46 31t-31 46t-11.5 56.5zM99 145q0 -42 28.5 -70t70.5 -28t70.5 28t28.5 70t-28.5 71t-70.5 29t-70.5 -29t-28.5 -71z
 " />
     <glyph glyph-name="t1p" unicode="&#xfbb2;" 

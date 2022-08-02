@@ -1067,27 +1067,27 @@ d="M47 0zM426 247l-40 -97l-322 172v96l322 174l40 -98l-249 -123zM47 0v98h402v-98h
 d="M47 0zM63.0254 247l39.9971 -97l321.98 172v96l-321.98 174l-39.9971 -98l248.984 -123zM47 0v98h402v-98h-402z" />
     <glyph glyph-name="black_small_square" unicode="&#x25aa;" horiz-adv-x="353" 
 d="M307 260v-260h-260v260h260z" />
-    <glyph glyph-name="white_small_square" unicode="&#x25ab;" horiz-adv-x="353" 
+    <glyph glyph-name="milkyWhite_small_square" unicode="&#x25ab;" horiz-adv-x="353" 
 d="M307 260v-260h-260v260h260zM134 86h85v85h-85v-85z" />
     <glyph glyph-name="black_upsmall_triangle" unicode="&#x25b4;" horiz-adv-x="432" 
 d="M386 0h-339l169 294z" />
-    <glyph glyph-name="white_upsmall_triangle" unicode="&#x25b5;" horiz-adv-x="432" 
+    <glyph glyph-name="milkyWhite_upsmall_triangle" unicode="&#x25b5;" horiz-adv-x="432" 
 d="M386 0h-339l169 294zM168 72h94l-47 84z" />
     <glyph glyph-name="black_rightsmall_triangle" unicode="&#x25b8;" horiz-adv-x="388" 
 d="M47 -7v339l295 -169z" />
-    <glyph glyph-name="white_rightsmall_triangle" unicode="&#x25b9;" horiz-adv-x="387" 
+    <glyph glyph-name="milkyWhite_rightsmall_triangle" unicode="&#x25b9;" horiz-adv-x="387" 
 d="M341 163l-294 -170v339zM202 163l-83 47v-94z" />
     <glyph glyph-name="black_downsmall_triangle" unicode="&#x25be;" horiz-adv-x="432" 
 d="M47 287h339l-170 -294z" />
-    <glyph glyph-name="white_downsmall_triangle" unicode="&#x25bf;" horiz-adv-x="432" 
+    <glyph glyph-name="milkyWhite_downsmall_triangle" unicode="&#x25bf;" horiz-adv-x="432" 
 d="M386 287l-170 -294l-169 294h339zM215 131l47 84h-94z" />
     <glyph glyph-name="black_leftsmall_triangle" unicode="&#x25c2;" horiz-adv-x="387" 
 d="M341 332v-339l-294 170z" />
-    <glyph glyph-name="white_leftsmall_triangle" unicode="&#x25c3;" horiz-adv-x="387" 
+    <glyph glyph-name="milkyWhite_leftsmall_triangle" unicode="&#x25c3;" horiz-adv-x="387" 
 d="M341 332v-339l-294 170zM268 116v94l-83 -47z" />
     <glyph glyph-name="dotted.ring" unicode="&#x25cc;" horiz-adv-x="630" 
 d="M166 110h110v-110h-110v110zM353 110h111v-110h-111v110zM166 484h110v-110h-110v110zM353 484h111v-110h-111v110zM473 296h110v-109h-110v109zM47 296h110v-109h-110v109z" />
-    <glyph glyph-name="white_bullet" unicode="&#x25e6;" horiz-adv-x="387" 
+    <glyph glyph-name="milkyWhite_bullet" unicode="&#x25e6;" horiz-adv-x="387" 
 d="M47 146q0 30 11.5 57t31 46.5t46 31t56.5 11.5t57 -11.5t47.5 -31t32 -46.5t11.5 -57t-11.5 -57t-32 -46.5t-47.5 -31t-57 -11.5t-56.5 11.5t-46 31t-31 46.5t-11.5 57zM139 146q0 -23 15.5 -38.5t38.5 -15.5t38.5 15.5t15.5 38.5t-15.5 38.5t-38.5 15.5t-38.5 -15.5
 t-15.5 -38.5z" />
     <glyph glyph-name="t1p" unicode="&#xfbb2;" 
