@@ -1,5 +1,5 @@
 .header-background {
-  background: url("../src/assets/d9b5cd8368a440fd79f3cb155b4a6112.jpg") center
+  background: url("../src/assets/pexels-antoni-shkraba-6599067_11zon.jpg") center
     no-repeat;
   background-size: cover;
 }
@@ -7,10 +7,27 @@
 .header-background::after {
   content: "";
   position: absolute;
-  height: 70%;
+  height: 80%;
   background: rgba(0, 0, 0, 0.414);
   width: 100%;
   top: 0;
   left: 0;
   z-index: 0;
+}
+
+.package-background {
+  background:url("../src/assets/6\ of\ The\ Most\ Emotional\ Books\ I\'ve\ Read\ All\ Year\ -\ The\ Espresso\ Edition.png") center no-repeat;
+  background-size: cover;
+}
+
+.package-background::after {
+  content: "";
+  position: absolute;
+  height: 80%;
+  background: rgba(0, 0, 0, 0.414);
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+
 }

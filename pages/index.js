@@ -4,6 +4,7 @@ import LastArticle from "../src/components/home/lastArticle";
 import { GET_ALL_BLOGS } from "../src/graphQl/queries";
 import { ApolloClient } from "@apollo/client/core";
 import { client } from "./_app";
+import Packages from "../src/components/home/packages";
 
 
 export default function Home({ blogs }) {
@@ -11,6 +12,7 @@ export default function Home({ blogs }) {
     <div className={""}>
       <Header />
       <LastArticle blogs={blogs} />
+      <Packages />
     </div>
   );
 }

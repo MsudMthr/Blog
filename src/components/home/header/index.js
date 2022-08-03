@@ -7,8 +7,8 @@ import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrow
 import FloatingNavbar from "../../../shared/FloatingNavbar";
 const Header = () => {
   return (
-    <section className="header-background h-[70vh]  ">
-      <div className="h-[70vh] w-[40%] bg-milkyWhite/5 backdrop-blur-md absolute top-0 left-0 z-0   "></div>
+    <section className="header-background h-[80vh]  ">
+      <div className="h-[80vh] w-[40%] bg-milkyWhite/5 backdrop-blur-md absolute top-0 left-0 z-0   "></div>
       <div className="flex justify-around items-center z-50 max-w-screen-xl mx-auto">
         <Navbar />
         <div className="flex items-center z-50 gap-3 justify-around w-full md:w-auto ">
