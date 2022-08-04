@@ -2,7 +2,6 @@ import React from "react";
 import LatestBlogCard from "../../../shared/LatestBlogCard";
 
 const LastArticle = ({ blogs }) => {
-  console.log(blogs);
   return (
     <section
       className="max-w-screen-lg px-14 mx-auto mt-10 flex flex-col justify-center items-center "

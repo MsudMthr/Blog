@@ -5,7 +5,7 @@ import { List, ListItem, ListItemText, Typography } from "@mui/material";
 const PackageCards = ({ image, header, items }) => {
   useAOS();
   return (
-    <div className="w-[400px] p-3 flex bg-milkyWhite max-h-[230px]" data-aos="fade-right">
+    <div className="w-[400px] p-3 flex bg-milkyWhite max-h-[230px]" data-aos="fade">
       <Image
         alt={header}
         src={image}

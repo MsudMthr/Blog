@@ -18,4 +18,16 @@ const GET_ALL_BLOGS = gql`
   }
 `;
 
-export { GET_ALL_BLOGS };
+const GET_ALL_CATEGORIES = gql`
+  query {
+    categories {
+      id
+      cover {
+        url
+      }
+      name
+    }
+  }
+`;
+
+export { GET_ALL_BLOGS, GET_ALL_CATEGORIES };

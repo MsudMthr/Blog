@@ -4,22 +4,30 @@ import PackageCards from "./PackageCards";
 const Packages = () => {
   return (
     <section className="my-20 package-background w-full h-[80vh]  ">
-      <div className="max-w-lg mx-auto relative h-[80vh] flex justify-around flex-col">
+      <div className="max-w-lg mx-auto relative h-[80vh] flex justify-evenly flex-col">
         <h1 className="md:rotate-90 md:absolute text-center -right-36 text-6xl text-milkyWhite font-extrabold drop-shadow-2xl">
           کمپ خوندن
         </h1>
-        <div className="md:absolute left-[50%] md:left-[10%] top-[10%] flex justify-center">
+        <div className="md:absolute  md:left-[10%] top-[10%] flex justify-center">
           <PackageCards
             image={image}
             header="لورم ایپسوم متن"
-            items={["لورم ایپسوم متن ساختگی ", "لورم ایپسوم متن ساختگی ", "لورم ایپسوم متن ساختگی "]}
+            items={[
+              "لورم ایپسوم متن ساختگی ",
+              "لورم ایپسوم متن ساختگی ",
+              "لورم ایپسوم متن ساختگی ",
+            ]}
           />
         </div>
-        <div className="md:absolute  -left-[30%] bottom-[10%] flex justify-center">
+        <div className="md:absolute  md:-left-[30%] md:bottom-[20%] flex justify-center">
           <PackageCards
             image={image}
             header="لورم ایپسوم متن"
-            items={["لورم ایپسوم متن ساختگی ", "لورم ایپسوم متن ساختگی ", "لورم ایپسوم متن ساختگی "]}
+            items={[
+              "لورم ایپسوم متن ساختگی ",
+              "لورم ایپسوم متن ساختگی ",
+              "لورم ایپسوم متن ساختگی ",
+            ]}
           />
         </div>
       </div>
