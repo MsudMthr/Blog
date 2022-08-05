@@ -27,7 +27,7 @@ const LatestBlogCard = ({ blogData }) => {
       />
       <Typography
         variant="h3"
-        className="text-xl font-bold text-justify  text-dark "
+        className="text-xl font-bold   text-dark "
       >
         {title}
       </Typography>
@@ -37,7 +37,7 @@ const LatestBlogCard = ({ blogData }) => {
         </Typography>
         <Typography
           variant="p"
-          className="ml-2 hover:text-cyan-600 cursor-pointer text-dark "
+          className="ml-2 hover:text-cyan-600 cursor-pointer text-dark text-justify "
         >
           {" "}
           {author}

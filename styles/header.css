@@ -7,7 +7,7 @@
 .header-background::after {
   content: "";
   position: absolute;
-  height: 80%;
+  height: 80vh;
   background: rgba(0, 0, 0, 0.414);
   width: 100%;
   top: 0;
