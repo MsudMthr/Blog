@@ -6,24 +6,18 @@ const PackageCards = ({ image, header, items }) => {
   useAOS();
   return (
     <div
-      className="flex flex-col md:flex-row max-h-[330px] flex-1 bg-milkyWhite p-3 md:w-[400px]"
-      data-aos="fade"
+      className="flex max-h-[330px] flex-1 flex-col bg-milkyWhite p-3 md:w-[400px] md:flex-row"
+      data-aos="zoom-out"
+      data-aos-duration="1500"
     >
-      <Image
-        alt={header}
-        src={image}
-        width={350}
-        height={200}
-        className=""
-      />
+      <Image alt={header} src={image} width={350} height={200} className="" />
 
-      <div className="flex md:w-[280px]  flex-col items-start justify-between ">
+      <div className="flex flex-col  items-start justify-between md:w-[280px] ">
         {/* header text package items */}
         <Typography
-         
           component="h5"
           marginRight={1}
-          className="text-darkBlue text-md md:text-xl"
+          className="text-md text-darkBlue md:text-xl"
         >
           {header}
         </Typography>

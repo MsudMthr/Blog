@@ -1,13 +1,17 @@
 import React from "react";
 import CategoryCard from "../../../shared/CategoryCard";
 
-const Category = ({categories}) => {
+const Category = ({ categories }) => {
   return (
-    <section className="max-w-screen-md mx-auto my-20 ">
-      <h1 className="font-bold text-darkBlue text-2xl self-start ">دسته بندی ها</h1>
-        {categories.map(category => {
-            <CategoryCard data={category} key={category.id} />
-        })}
+    <section className="mx-auto  max-w-screen-md px-2">
+      <h1 className="self-start text-2xl font-bold text-darkBlue mb-3">
+        دسته بندی ها
+      </h1>
+      <div className="flex justify-around gap-1 overflow-auto">
+        {categories.map((category) => (
+          <CategoryCard data={category} key={category.id} />
+        ))}
+      </div>
     </section>
   );
 };

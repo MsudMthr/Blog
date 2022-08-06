@@ -30,4 +30,17 @@ const GET_ALL_CATEGORIES = gql`
   }
 `;
 
-export { GET_ALL_BLOGS, GET_ALL_CATEGORIES };
+const GET_ALL_AUTHORS = gql`
+  query {
+    authors {
+      avatar {
+        url
+      }
+      id
+      name
+      slug
+    }
+  }
+`;
+
+export { GET_ALL_BLOGS, GET_ALL_CATEGORIES, GET_ALL_AUTHORS };

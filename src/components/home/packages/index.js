@@ -4,12 +4,12 @@ import imageCamp2 from "../../../assets/6 of The Most Emotional Books I've Read 
 import PackageCards from "./PackageCards";
 const Packages = () => {
   return (
-    <section className="package-background my-20 h-[100vh] w-full  ">
-      <div className="relative mx-auto flex h-[100vh] md:max-w-lg flex-col justify-evenly">
+    <section className="package-background my-10 h-[100vh] w-full  ">
+      <div className="relative mx-auto flex h-[100vh] flex-col justify-evenly md:max-w-lg">
         <h1 className="-right-36 text-center text-6xl font-extrabold text-milkyWhite drop-shadow-2xl md:absolute md:rotate-90">
           کمپ خوندن
         </h1>
-        <div className="flex flex-row md:flex-col gap-2 relative px-2" >
+        <div className="relative flex flex-row gap-2 px-2 md:flex-col">
           <div className="flex  justify-center md:absolute md:top-[20px] md:left-[10%]">
             <PackageCards
               image={imageCamp1}
