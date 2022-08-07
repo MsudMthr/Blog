@@ -1,27 +1,35 @@
 import React from "react";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
+import Link from "next/link";
+import Image from "next/image";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
+
 const AuthorCard = ({ author }) => {
   const { name, avatar, slug, id } = author;
   return (
-    <Card sx={{ maxWidth: 345, textAlign: "center", flex: 1 }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          className="h-[200px] w-[200px] "
-          image={avatar.url}
-          alt={slug}
+    <Link passHref href={"#"}>
+      <CardActionArea
+        data-aos="zoom"
+        data-aos-duration="1500"
+        className="flex flex-col items-center gap-2 max-w-[120px] rounded-md"
+      >
+        <Image
+          src={avatar.url}
+          alt={name}
+          className={"cursor-pointer rounded-2xl"}
+          width={100}
+          height={100}
         />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            {name}
-          </Typography>
-        </CardContent>
+        <Typography
+          variant="h6"
+          component={"p"}
+          fontWeight="700"
+          className="cursor-pointer text-base md:text-xl "
+        >
+          {name}
+        </Typography>
       </CardActionArea>
-    </Card>
+    </Link>
   );
 };
 

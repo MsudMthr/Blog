@@ -31,7 +31,7 @@ export async function getStaticProps() {
     props: {
       blogs: AllBlogs.data.posts,
       categories: AllCategories.data.categories,
-      authors: AllAuthors.data.authors,
+      authors: AllAuthors.data.authors.slice(0,3),
     },
   };
 }
