@@ -3,7 +3,7 @@ import AuthorCard from "../../../shared/AuthorCard";
 import { ArrowBack } from "@mui/icons-material";
 const Authors = ({ authors }) => {
   return (
-    <section className="bg-amber-100/20">
+    <section className="bg-amber-100/20 py-5">
       <div className="mx-auto  max-w-screen-md px-2 ">
         <h1 className="mb-3 self-start text-2xl font-bold text-darkBlue">
           نویسنده ها

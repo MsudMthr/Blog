@@ -9,6 +9,7 @@ import { client } from "./_app";
 import Packages from "../src/components/home/packages";
 import Category from "../src/components/home/category";
 import Authors from "../src/components/home/authors";
+import Footer from "../src/components/footer";
 
 export default function Home({ blogs, categories, authors }) {
   console.log(authors);
@@ -19,6 +20,7 @@ export default function Home({ blogs, categories, authors }) {
       <Packages />
       <Category categories={categories} />
       <Authors authors={authors} />
+      <Footer />
     </div>
   );
 }
@@ -31,7 +33,7 @@ export async function getStaticProps() {
     props: {
       blogs: AllBlogs.data.posts,
       categories: AllCategories.data.categories,
-      authors: AllAuthors.data.authors.slice(0,3),
+      authors: AllAuthors.data.authors.slice(0, 3),
     },
   };
 }
