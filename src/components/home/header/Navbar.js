@@ -3,11 +3,11 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="pt-4 md:flex items-center justify-between w-80 z-50 hidden ">
-      <Link href={"#"}>
+    <div className="z-50 hidden w-80 items-center justify-between pt-4 md:flex ">
+      <Link href={"/"}>
         <a className="px-2 py-1 text-milkyWhite drop-shadow-xl">خانه</a>
       </Link>
-      <Link href={"#"}>
+      <Link href={"/blogs"}>
         <a className="px-2 py-1 text-milkyWhite drop-shadow-xl">مقالات</a>
       </Link>
       <Link href={"#"}>

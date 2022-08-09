@@ -11,7 +11,7 @@ const AuthorCard = ({ author }) => {
       <CardActionArea
         data-aos="zoom"
         data-aos-duration="1500"
-        className="flex flex-col items-center gap-2 max-w-[120px] rounded-md"
+        className="flex flex-col justify-center items-center gap-2 max-w-[120px] rounded-md"
       >
         <Image
           src={avatar.url}

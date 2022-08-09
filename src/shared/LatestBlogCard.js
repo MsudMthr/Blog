@@ -20,7 +20,7 @@ const LatestBlogCard = ({ blogData }) => {
 
   const sharedData = {
     title,
-    text,
+    text: text.text,
     url: "link",
   };
 
@@ -33,7 +33,7 @@ const LatestBlogCard = ({ blogData }) => {
         height={"200"}
         className="rounded-sm"
       />
-      <Typography variant="h3" className="text-xl font-bold   text-dark ">
+      <Typography variant="h3" className="text-lg font-bold  text-dark ">
         {title}
       </Typography>
       <div className="flex flex-row-reverse justify-start gap-2">
@@ -53,7 +53,7 @@ const LatestBlogCard = ({ blogData }) => {
       <Divider />
       <div className="flex flex-col items-end gap-2">
         <Link href="#">
-          <a className="text-sm font-bold transition-all hover:text-lightBlue">
+          <a className="text-sm font-bold text-lightBlue transition-all hover:text-darkBlue">
             بیشتر
           </a>
         </Link>

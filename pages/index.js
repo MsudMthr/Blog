@@ -9,7 +9,7 @@ import { client } from "./_app";
 import Packages from "../src/components/home/packages";
 import Category from "../src/components/home/category";
 import Authors from "../src/components/home/authors";
-import Footer from "../src/components/footer";
+import Footer from "../src/components/layout/footer";
 
 export default function Home({ blogs, categories, authors }) {
   console.log(authors);

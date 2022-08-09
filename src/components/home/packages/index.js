@@ -4,8 +4,8 @@ import imageCamp2 from "../../../assets/6 of The Most Emotional Books I've Read 
 import PackageCards from "./PackageCards";
 const Packages = () => {
   return (
-    <section className="package-background my-10 h-[80vh] w-full  ">
-      <div className="relative mx-auto flex h-[80vh] flex-col justify-evenly md:max-w-lg">
+    <section className="package-background relative my-10 h-[80vh] w-full  ">
+      <div className="relative mx-auto flex h-[80vh] flex-col justify-evenly md:max-w-lg z-20">
         <h1 className="-right-36 text-center text-6xl font-extrabold text-milkyWhite drop-shadow-2xl md:absolute md:rotate-90">
           کمپ خوندن
         </h1>

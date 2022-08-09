@@ -12,7 +12,7 @@ const CategoryCard = ({ data }) => {
       <CardActionArea
         data-aos="zoom-in"
         data-aos-duration="1500"
-        className="flex flex-col items-center gap-2 max-w-[120px] rounded-md"
+        className="flex flex-col justify-center items-center gap-2 max-w-[120px] rounded-md"
       >
         <Image
           src={cover.url}
