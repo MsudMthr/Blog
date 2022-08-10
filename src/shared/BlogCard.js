@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 import { Divider, Typography } from "@mui/material";
 import Link from "next/link";
 import { Comment, Share } from "@mui/icons-material";
-const LatestBlogCard = ({ blogData }) => {
+const BlogCard = ({ blogData }) => {
   const {
     coverPhoto: { url },
     text,
@@ -33,7 +33,11 @@ const LatestBlogCard = ({ blogData }) => {
         height={"200"}
         className="rounded-sm"
       />
-      <Typography variant="h3" className="text-lg font-bold  text-dark ">
+      <Typography
+        variant="p"
+        component={"h3"}
+        className="text-lg font-bold  text-dark "
+      >
         {title}
       </Typography>
       <div className="flex flex-row-reverse justify-start gap-2">
@@ -70,4 +74,4 @@ const LatestBlogCard = ({ blogData }) => {
   );
 };
 
-export default LatestBlogCard;
+export default BlogCard;

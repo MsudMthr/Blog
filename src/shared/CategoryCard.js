@@ -8,11 +8,11 @@ const CategoryCard = ({ data }) => {
   useAOS();
 
   return (
-    <Link passHref href={"#"}>
+    <Link passHref href={"#"} className="flex items-center justify-center">
       <CardActionArea
         data-aos="zoom-in"
         data-aos-duration="1500"
-        className="flex flex-col justify-center items-center gap-2 max-w-[120px] rounded-md"
+        className="flex max-w-[120px] flex-col items-center justify-center gap-2 rounded-md"
       >
         <Image
           src={cover.url}
