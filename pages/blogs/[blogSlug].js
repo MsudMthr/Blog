@@ -1,7 +1,8 @@
 import React from "react";
-import { GET_ALL_BLOGS } from "../../src/graphQl/queries";
+import { GET_ALL_BLOGS, GET_POST_INFO } from "../../src/graphQl/queries";
 import { client } from "../_app";
-const blogPage = () => {
+const blogPage = ({ blog }) => {
+  console.log(blog);
   return <div></div>;
 };
 
@@ -12,13 +13,11 @@ export const getStaticPaths = async () => {
     query: GET_ALL_BLOGS,
   });
 
-  const paths = data.posts.map((post) => {
+  const paths = await data.posts.map((post) => {
     return {
       params: { blogSlug: `${post.slug}` },
     };
   });
-
-  console.log(data);
 
   return {
     paths,
@@ -26,9 +25,18 @@ export const getStaticPaths = async () => {
   };
 };
 
-export const getStaticProps = async ({ params }) => {
-  console.log(params);
+export const getStaticProps = async (context) => {
+  const {
+    params: { blogSlug },
+  } = context;
+  console.log(blogSlug);
+  const { data } = await client.query({
+    query: GET_POST_INFO,
+    // variables: { blogSlug },
+  });
   return {
-    props: {},
+    props: {
+      blog: data,
+    },
   };
 };

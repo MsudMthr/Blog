@@ -9,10 +9,16 @@ const GET_ALL_BLOGS = gql`
         url
       }
       id
-      author
       published_time
       text {
         text
+      }
+      postAuthor {
+        avatar {
+          url
+        }
+        name
+        id
       }
     }
   }
@@ -43,4 +49,30 @@ const GET_ALL_AUTHORS = gql`
   }
 `;
 
-export { GET_ALL_BLOGS, GET_ALL_CATEGORIES, GET_ALL_AUTHORS };
+const GET_POST_INFO = gql`
+  query getPost($slug: String!) {
+    post(where: { slug: $slug }) {
+      id
+      coverPhoto {
+        url
+      }
+      text {
+        html
+      }
+      title
+      postAuthor {
+        avatar {
+          url
+        }
+        name
+        slug
+      }
+      location {
+        latitude
+        longitude
+      }
+    }
+  }
+`;
+
+export { GET_ALL_BLOGS, GET_ALL_CATEGORIES, GET_ALL_AUTHORS, GET_POST_INFO };

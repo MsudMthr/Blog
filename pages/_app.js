@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <ApolloProvider client={client}>
       <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
+        <Component {...pageProps}  />
       </ThemeProvider>
     </ApolloProvider>
   );

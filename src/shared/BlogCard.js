@@ -3,7 +3,7 @@ import Image from "next/image";
 import { dateSplitter, textShorter } from "../helper/function";
 import useAOS from "../hooks/useAOS";
 import "aos/dist/aos.css";
-import { Divider, Typography } from "@mui/material";
+import { Avatar, Divider, Typography } from "@mui/material";
 import Link from "next/link";
 import { Comment, Share } from "@mui/icons-material";
 const BlogCard = ({ blogData }) => {
@@ -13,7 +13,7 @@ const BlogCard = ({ blogData }) => {
     slug,
     title,
     published_time,
-    author,
+    postAuthor: { avatar, name },
   } = blogData;
 
   useAOS();
@@ -40,20 +40,21 @@ const BlogCard = ({ blogData }) => {
       >
         {title}
       </Typography>
-      <div className="flex flex-row-reverse justify-start gap-2">
-        <Typography className="font-thin text-dark " variant="p">
+      <div className="flex  items-center justify-end gap-2">
+        <Typography className="text-xs font-thin text-dark " variant="p">
           {dateSplitter(published_time)}
         </Typography>
         <Typography
           variant="p"
-          className="ml-2 cursor-pointer text-justify text-dark hover:text-cyan-600 "
+          className="ml-2 cursor-pointer text-justify text-xs text-dark hover:text-cyan-600 "
         >
-          {author}
+          {name}
         </Typography>
+        <Avatar alt={name} src={avatar.url} sx={{ width: 32, height: 32 }} />
       </div>
       <Divider />
 
-      <p className="text-justify text-dark line-clamp-3 ">{text.text}</p>
+      <p className="text-justify text-dark line-clamp-3 selection:bg-purple-500/50 ">{text.text}</p>
       <Divider />
       <div className="flex flex-col items-end gap-2">
         <Link href="#">
