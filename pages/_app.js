@@ -1,22 +1,17 @@
 import "../styles/globals.css";
 import "../styles/font.css";
 
-import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import { ApolloProvider } from "@apollo/client";
 import { ThemeProvider } from "@mui/material";
 import theme from "../src/mui/theme";
-// create apollo provider
-export const client = new ApolloClient({
-  uri: process.env.NEXT_PUBLIC_GRAPHCMS_URI,
-  cache: new InMemoryCache(),
-});
-
-
+import { useApollo } from "../src/graphQl/apollo";
 
 function MyApp({ Component, pageProps }) {
+  const apolloCLient = useApollo(pageProps.initialApolloState);
   return (
-    <ApolloProvider client={client}>
+    <ApolloProvider client={apolloCLient}>
       <ThemeProvider theme={theme}>
-        <Component {...pageProps}  />
+        <Component {...pageProps} />
       </ThemeProvider>
     </ApolloProvider>
   );
