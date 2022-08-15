@@ -50,27 +50,27 @@ const GET_ALL_AUTHORS = gql`
 `;
 
 const GET_POST_INFO = gql`
-  query getPostInfo($slug: String!) {
+  query GetPostInfo($slug: String!) {
     post(where: { slug: $slug }) {
       id
-    }
-    coverPhoto {
-      url
-    }
-    text {
-      html
-    }
-    title
-    postAuthor {
-      avatar {
+      coverPhoto {
         url
       }
-      name
-      slug
-    }
-    location {
-      latitude
-      longitude
+      text {
+        html
+      }
+      title
+      postAuthor {
+        avatar {
+          url
+        }
+        name
+        slug
+      }
+      location {
+        latitude
+        longitude
+      }
     }
   }
 `;
