@@ -54,10 +54,12 @@ const BlogCard = ({ blogData }) => {
       </div>
       <Divider />
 
-      <p className="text-justify text-dark line-clamp-3 selection:bg-purple-500/50 ">{text.text}</p>
+      <p className="text-justify text-dark line-clamp-3 selection:bg-purple-500/50 ">
+        {text.text}
+      </p>
       <Divider />
       <div className="flex flex-col items-end gap-2">
-        <Link href="#">
+        <Link href={`/blogs/${slug}`}>
           <a className="text-sm font-bold text-lightBlue transition-all hover:text-darkBlue">
             بیشتر
           </a>
