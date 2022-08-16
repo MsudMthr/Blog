@@ -7,7 +7,7 @@ import { CardActionArea } from "@mui/material";
 const AuthorCard = ({ author }) => {
   const { name, avatar, slug, id } = author;
   return (
-    <Link passHref href={"#"} className="flex items-center justify-center">
+    <Link passHref href={"#"} className="flex items-center justify-center ">
       <CardActionArea
         data-aos="zoom"
         data-aos-duration="1500"
@@ -16,7 +16,7 @@ const AuthorCard = ({ author }) => {
         <Image
           src={avatar.url}
           alt={name}
-          className={"cursor-pointer rounded-2xl"}
+          className={"cursor-pointer rounded-2xl  "}
           width={100}
           height={100}
         />
@@ -24,7 +24,7 @@ const AuthorCard = ({ author }) => {
           variant="h6"
           component={"p"}
           fontWeight="700"
-          className="cursor-pointer text-base md:text-xl "
+          className="cursor-pointer text-center md:text-xl "
         >
           {name}
         </Typography>

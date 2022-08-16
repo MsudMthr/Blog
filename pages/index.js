@@ -1,16 +1,19 @@
-import Header from "../src/components/home/header";
-import LastArticle from "../src/components/home/lastArticle";
+import { useQuery } from "@apollo/client";
+import { initializeApollo } from "../src/graphQl/apollo";
+//queries
 import {
   GET_ALL_AUTHORS,
   GET_ALL_BLOGS,
   GET_ALL_CATEGORIES,
 } from "../src/graphQl/queries";
+//components
+import Header from "../src/components/home/header";
+import LastArticle from "../src/components/home/lastArticle";
 import Packages from "../src/components/home/packages";
 import Category from "../src/components/home/category";
 import Authors from "../src/components/home/authors";
 import Footer from "../src/components/layout/footer";
-import { initializeApollo } from "../src/graphQl/apollo";
-import { useQuery } from "@apollo/client";
+
 
 export default function Home() {
   const blogs = useQuery(GET_ALL_BLOGS);

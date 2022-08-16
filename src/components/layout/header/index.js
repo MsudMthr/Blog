@@ -4,7 +4,7 @@ import SearchBlogs from "../../home/header/SearchBlogs";
 
 const Header = () => {
   return (
-    <header className=" mb-1  bg-[#1f313f] py-2  ">
+    <header className=" mb-1  bg-[#1f313f] py-2 sticky top-0 z-50">
       <div
         className="mx-auto  flex max-w-screen-lg items-center md:justify-around"
       >
