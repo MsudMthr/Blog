@@ -1,15 +1,18 @@
 import "../styles/globals.css";
 import "../styles/font.css";
 
-import { ApolloProvider } from "@apollo/client";
+import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
 import { ThemeProvider } from "@mui/material";
 import theme from "../src/mui/theme";
-import { useApollo } from "../src/graphQl/apollo";
+
+export const client = new ApolloClient({
+  uri: "https://api-us-west-2.hygraph.com/v2/cl63tqo0s754701uk1pnzg0s7/master",
+  cache: new InMemoryCache(),
+});
 
 function MyApp({ Component, pageProps }) {
-  const apolloCLient = useApollo(pageProps.initialApolloState);
   return (
-    <ApolloProvider client={apolloCLient}>
+    <ApolloProvider client={client}>
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
       </ThemeProvider>

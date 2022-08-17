@@ -7,13 +7,8 @@ import Image from "next/image";
 import sanitizeHtml from "sanitize-html";
 import { Avatar } from "@mui/material";
 import Link from "next/link";
-const BlogPage = ({ slug }) => {
-  //fetch data with useQuery
-  const { data, loading } = useQuery(GET_POST_INFO, {
-    variables: { slug },
-  });
-  //loading handler
-  if (loading) return <h1>Loading ...</h1>;
+import { client } from "pages/_app";
+const BlogPage = ({ blog }) => {
   // destructuring data
   const {
     title,
@@ -22,7 +17,7 @@ const BlogPage = ({ slug }) => {
     postAuthor,
     text: { html },
     id,
-  } = data.post;
+  } = blog.post;
   console.log(postAuthor);
 
   return (
@@ -61,7 +56,7 @@ export default BlogPage;
 const apolloClient = initializeApollo();
 
 export const getStaticPaths = async () => {
-  const { data } = await apolloClient.query({
+  const { data } = await client.query({
     query: GET_ALL_BLOGS,
   });
   const paths = await data.posts.map((post) => {
@@ -78,13 +73,13 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params }) => {
   const slug = params.blogSlug;
 
-  await apolloClient.query({
+  const blog = await client.query({
     query: GET_POST_INFO,
     variables: { slug },
   });
   return {
     props: {
-      initializeApolloState: apolloClient.cache.extract(),
+      blog: blog.data,
       slug,
     },
   };

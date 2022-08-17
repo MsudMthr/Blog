@@ -1,5 +1,4 @@
-import { useQuery } from "@apollo/client";
-import { initializeApollo } from "../src/graphQl/apollo";
+import { client } from "./_app";
 //queries
 import {
   GET_ALL_AUTHORS,
@@ -14,36 +13,28 @@ import Category from "../src/components/home/category";
 import Authors from "../src/components/home/authors";
 import Footer from "../src/components/layout/footer";
 
-
-export default function Home() {
-  const blogs = useQuery(GET_ALL_BLOGS);
-  const categories = useQuery(GET_ALL_CATEGORIES);
-  const authors = useQuery(GET_ALL_AUTHORS);
-
-  if (blogs.loading || categories.loading || authors.loading)
-    return <h1>Loading ...</h1>;
-
+export default function Home({ blogs, categories, authors }) {
   return (
     <div className={""}>
       <Header />
-      <LastArticle blogs={blogs.data.posts} />
+      <LastArticle blogs={blogs} />
       <Packages />
-      <Category categories={categories.data.categories} />
-      <Authors authors={authors.data.authors.slice(0, 3)} />
+      <Category categories={categories} />
+      <Authors authors={authors.slice(0, 3)} />
       <Footer />
     </div>
   );
 }
 
 export async function getStaticProps() {
-  const apolloClient = initializeApollo();
-
-  await apolloClient.query({ query: GET_ALL_BLOGS });
-  await apolloClient.query({ query: GET_ALL_CATEGORIES });
-  await apolloClient.query({ query: GET_ALL_AUTHORS });
+  const blogs = await client.query({ query: GET_ALL_BLOGS });
+  const categories = await client.query({ query: GET_ALL_CATEGORIES });
+  const authors = await client.query({ query: GET_ALL_AUTHORS });
   return {
     props: {
-      initializeApolloState: apolloClient.cache.extract(),
+      blogs: blogs.data.posts,
+      categories: categories.data.categories,
+      authors: authors.data.authors,
     },
   };
 }
