@@ -10,7 +10,7 @@ const Navbar = () => {
       <Link href={"/blogs"}>
         <a className="px-2 py-1 text-milkyWhite drop-shadow-xl">مقالات</a>
       </Link>
-      <Link href={"#"}>
+      <Link href={"/authors"}>
         <a className="px-2 py-1 text-milkyWhite drop-shadow-xl">نویسنده ها</a>
       </Link>
       <Link href={"#"}>

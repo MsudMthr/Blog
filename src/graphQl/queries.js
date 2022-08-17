@@ -45,6 +45,7 @@ const GET_ALL_AUTHORS = gql`
       id
       name
       slug
+      field
     }
   }
 `;
@@ -75,4 +76,33 @@ const GET_POST_INFO = gql`
   }
 `;
 
-export { GET_ALL_BLOGS, GET_ALL_CATEGORIES, GET_ALL_AUTHORS, GET_POST_INFO };
+const GET_AUTHOR_INFO = gql`
+  query GetUserInfo($slug: String!) {
+    author(where: { slug: $slug }) {
+      id
+      avatar {
+        url
+      }
+      description {
+        html
+      }
+      field
+      name
+      posts {
+        coverPhoto {
+          url
+        }
+        slug
+      }
+      slug
+    }
+  }
+`;
+
+export {
+  GET_ALL_BLOGS,
+  GET_ALL_CATEGORIES,
+  GET_ALL_AUTHORS,
+  GET_POST_INFO,
+  GET_AUTHOR_INFO,
+};

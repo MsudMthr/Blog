@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
   return (
     <div>
       <Header />
-      <div className="max-w-screen-lg mx-auto">{children}</div>
+      <div className="mx-auto max-w-screen-lg ">{children}</div>
       <div className="md:hidden">
         <FloatingNavbar />
       </div>
