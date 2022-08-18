@@ -13,7 +13,7 @@ const BlogCard = ({ blogData }) => {
     slug,
     title,
     published_time,
-    postAuthor: { avatar, name },
+    postAuthor
   } = blogData;
 
   useAOS();
@@ -44,13 +44,13 @@ const BlogCard = ({ blogData }) => {
         <Typography className="text-xs font-thin text-dark " variant="p">
           {dateSplitter(published_time)}
         </Typography>
-        <Typography
-          variant="p"
+        <Link
+          href={`/authors/${postAuthor.slug}`}
           className="ml-2 cursor-pointer text-justify text-xs text-dark hover:text-cyan-600 "
         >
-          {name}
-        </Typography>
-        <Avatar alt={name} src={avatar.url} sx={{ width: 32, height: 32 }} />
+          <a>{postAuthor.name}</a>
+        </Link>
+        <Avatar alt={postAuthor.name} src={postAuthor.avatar.url} sx={{ width: 32, height: 32 }} />
       </div>
       <Divider />
 

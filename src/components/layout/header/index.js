@@ -4,10 +4,8 @@ import SearchBlogs from "../../home/header/SearchBlogs";
 
 const Header = () => {
   return (
-    <header className=" mb-1  bg-[#1f313f] py-2 sticky top-0 z-50">
-      <div
-        className="mx-auto  flex max-w-screen-lg items-center md:justify-around"
-      >
+    <header className=" sticky  top-0 z-50 mb-1 bg-[#1f313f]/90 py-2 shadow-md shadow-[#1f313f]/50 backdrop-blur">
+      <div className="mx-auto  flex max-w-screen-lg items-center md:justify-around">
         <Navbar />
         <div className="flex w-11/12 items-center justify-around md:w-auto md:justify-center">
           <SearchBlogs />

@@ -18,6 +18,7 @@ const GET_ALL_BLOGS = gql`
           url
         }
         name
+        slug
         id
       }
     }
@@ -92,6 +93,7 @@ const GET_AUTHOR_INFO = gql`
         coverPhoto {
           url
         }
+        title
         slug
       }
       slug

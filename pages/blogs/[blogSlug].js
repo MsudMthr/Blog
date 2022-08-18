@@ -1,6 +1,5 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
-import { initializeApollo } from "../../src/graphQl/apollo";
 import { GET_ALL_BLOGS, GET_POST_INFO } from "../../src/graphQl/queries";
 import Layout from "../../src/components/layout/Layout";
 import Image from "next/image";
@@ -31,7 +30,7 @@ const BlogPage = ({ blog }) => {
               src={postAuthor.avatar.url}
               sx={{ width: 32, height: 32 }}
             />
-            <Link href={"#"}>
+            <Link href={`/authors/${postAuthor.slug}`}>
               <a className="transition-all hover:text-darkBlue">
                 {postAuthor.name}
               </a>
@@ -51,9 +50,6 @@ const BlogPage = ({ blog }) => {
 };
 
 export default BlogPage;
-
-//create apollo client for query in ssg functions
-const apolloClient = initializeApollo();
 
 export const getStaticPaths = async () => {
   const { data } = await client.query({
