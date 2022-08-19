@@ -7,6 +7,7 @@ import sanitizeHtml from "sanitize-html";
 import { Avatar } from "@mui/material";
 import Link from "next/link";
 import { client } from "pages/_app";
+import SimpleMap from "@/components/Map";
 const BlogPage = ({ blog }) => {
   // destructuring data
   const {
@@ -17,7 +18,7 @@ const BlogPage = ({ blog }) => {
     text: { html },
     id,
   } = blog.post;
-  console.log(postAuthor);
+  console.log(blog.post);
 
   return (
     <Layout>
@@ -45,6 +46,13 @@ const BlogPage = ({ blog }) => {
         className="unreset px-2 leading-7"
         dangerouslySetInnerHTML={{ __html: sanitizeHtml(html) }}
       ></div>
+      {location.latitude && (
+        <SimpleMap
+          lat={location.latitude}
+          lng={location.longitude}
+          text={postAuthor.name}
+        />
+      )}
     </Layout>
   );
 };
