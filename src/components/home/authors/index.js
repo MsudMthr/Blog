@@ -1,5 +1,5 @@
 import React from "react";
-import AuthorCard from "../../../shared/AuthorCard";
+import AuthorHomeCard from "../../../shared/AuthorHomeCard";
 import { ArrowBack } from "@mui/icons-material";
 const Authors = ({ authors }) => {
   return (
@@ -10,7 +10,7 @@ const Authors = ({ authors }) => {
         </h1>
         <div className="flex items-center justify-around gap-2 ">
           {authors.map((author) => (
-            <AuthorCard key={author.id} author={author} />
+            <AuthorHomeCard key={author.id} author={author} />
           ))}
           <button className="mt-3 rounded px-6 py-0.5 text-sm text-lightBlue transition-all duration-300  hover:bg-darkBlue/10 focus:bg-lightBlue focus:text-milkyWhite md:text-base md:font-medium  ">
             بیشتر <ArrowBack className="hidden md:inline-block" />

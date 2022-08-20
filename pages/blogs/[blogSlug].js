@@ -46,7 +46,7 @@ const BlogPage = ({ blog }) => {
         className="unreset px-2 leading-7"
         dangerouslySetInnerHTML={{ __html: sanitizeHtml(html) }}
       ></div>
-      {location.latitude && (
+      {location && (
         <SimpleMap
           lat={location.latitude}
           lng={location.longitude}

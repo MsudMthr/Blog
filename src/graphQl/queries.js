@@ -33,6 +33,7 @@ const GET_ALL_CATEGORIES = gql`
         url
       }
       name
+      categorySlug
     }
   }
 `;
@@ -101,10 +102,29 @@ const GET_AUTHOR_INFO = gql`
   }
 `;
 
+const GET_CATEGORY_INFO = gql`
+  query GetCategoryInfo($id: ID!) {
+    category(where: { id: $id }) {
+      id
+      categorySlug
+      cover {
+        url
+      }
+      name
+      posts {
+        id
+        slug
+        title
+      }
+    }
+  }
+`;
+
 export {
   GET_ALL_BLOGS,
   GET_ALL_CATEGORIES,
   GET_ALL_AUTHORS,
   GET_POST_INFO,
   GET_AUTHOR_INFO,
+  GET_CATEGORY_INFO,
 };

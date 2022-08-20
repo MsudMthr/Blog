@@ -2,7 +2,7 @@ import { CardActionArea, Typography } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import useAOS from "../hooks/useAOS";
-const CategoryCard = ({ data }) => {
+const CategoryHomeCard = ({ data }) => {
   const { cover, name } = data;
 
   useAOS();
@@ -34,4 +34,4 @@ const CategoryCard = ({ data }) => {
   );
 };
 
-export default CategoryCard;
+export default CategoryHomeCard;

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 
-const AuthorCard = ({ author }) => {
+const AuthorHomeCard = ({ author }) => {
   const { name, avatar, slug, id } = author;
   return (
     <Link passHref href={"#"} className="flex items-center justify-center ">
@@ -33,4 +33,4 @@ const AuthorCard = ({ author }) => {
   );
 };
 
-export default AuthorCard;
+export default AuthorHomeCard;

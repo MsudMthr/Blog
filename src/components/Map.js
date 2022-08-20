@@ -1,11 +1,11 @@
 import React from "react";
 import GoogleMapReact from "google-map-react";
-import mapMarker from '../assets/map-marker-svgrepo-com.svg'
+import RoomOutlinedIcon from "@mui/icons-material/RoomOutlined";
 import Image from "next/image";
 const AnyReactComponent = ({ text }) => (
-  <div className="w-full  flex flex-col items-center">
-    <p className="font-black text-xl text-dark ">{text}</p>
-    <Image src={mapMarker} alt={text} width={50} height={50} />
+  <div className="flex    flex-col items-center">
+    <p className="w-40 text-center text-2xl font-black text-white ">{text}</p>
+    <RoomOutlinedIcon color="error" />
   </div>
 );
 
@@ -20,7 +20,7 @@ export default function SimpleMap({ lng, lat, text }) {
 
   return (
     // Important! Always set the container height explicitly
-    <div style={{ height: "100vh", width: "100%" }}>
+    <div className="mx-auto mb-3 h-[80vh] w-full overflow-hidden rounded-md px-5 sm:w-10/12">
       <GoogleMapReact
         bootstrapURLKeys={{ key: "" }}
         defaultCenter={defaultProps.center}
