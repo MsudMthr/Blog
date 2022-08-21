@@ -1,5 +1,4 @@
 import React from "react";
-import { useQuery } from "@apollo/client";
 import { GET_ALL_BLOGS, GET_POST_INFO } from "../../src/graphQl/queries";
 import Layout from "../../src/components/layout/Layout";
 import Image from "next/image";
@@ -8,6 +7,9 @@ import { Avatar } from "@mui/material";
 import Link from "next/link";
 import { client } from "pages/_app";
 import SimpleMap from "@/components/Map";
+import CommentForm from "@/components/comments/CommentForm";
+import Comments from "@/components/comments/Comments";
+
 const BlogPage = ({ blog }) => {
   // destructuring data
   const {
@@ -15,6 +17,7 @@ const BlogPage = ({ blog }) => {
     location,
     coverPhoto: { url },
     postAuthor,
+    slug,
     text: { html },
     id,
   } = blog.post;
@@ -53,6 +56,8 @@ const BlogPage = ({ blog }) => {
           text={postAuthor.name}
         />
       )}
+      <CommentForm slug={slug} />
+      <Comments slug={slug} />
     </Layout>
   );
 };

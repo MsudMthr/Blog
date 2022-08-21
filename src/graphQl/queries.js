@@ -56,6 +56,7 @@ const GET_POST_INFO = gql`
   query GetPostInfo($slug: String!) {
     post(where: { slug: $slug }) {
       id
+      slug
       coverPhoto {
         url
       }
@@ -115,7 +116,27 @@ const GET_CATEGORY_INFO = gql`
         id
         slug
         title
+        coverPhoto {
+          url
+        }
+        postAuthor {
+          avatar {
+            url
+          }
+          name
+          slug
+        }
       }
+    }
+  }
+`;
+
+const GET_POST_COMMENTS = gql`
+  query GetPostComments($slug: String!) {
+    comments(where: { post: { slug: $slug } }) {
+      id
+      name
+      text
     }
   }
 `;
@@ -127,4 +148,5 @@ export {
   GET_POST_INFO,
   GET_AUTHOR_INFO,
   GET_CATEGORY_INFO,
+  GET_POST_COMMENTS,
 };

@@ -5,13 +5,13 @@ import React from "react";
 const BlogAuthorsCard = ({ blogData }) => {
   const { coverPhoto, slug, title } = blogData;
   return (
-    <div className=" relative">
+    <div className=" relative rounded-md overflow-hidden ">
       <Image
         src={coverPhoto.url}
         alt={slug}
         width={250}
         height={200}
-        className="rounded-md"
+        className=""
       />
       <div className="absolute bottom-0 flex w-full flex-col items-start bg-gradient-to-b from-white/0 via-black/50 to-black/80  py-2 px-2 backdrop-blur-md">
         <h4 className=" text-lg font-semibold text-gray-100">{title}</h4>

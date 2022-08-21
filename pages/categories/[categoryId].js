@@ -1,4 +1,5 @@
 import Layout from "@/components/layout/Layout";
+import BlogAuthorsCard from "@/shared/BlogAuthorsCard";
 import { useRouter } from "next/router";
 import { client } from "pages/_app";
 import React from "react";
@@ -8,11 +9,15 @@ const Category = ({ category }) => {
   const router = useRouter();
 
   if (router.isFallback) return <h1>Loading ...</h1>;
-
+  console.log(category);
   return (
     <Layout>
       <section className="mx-auto my-4 max-w-screen-lg">
-        <div className=""></div>
+        <div className="flex flex-wrap justify-evenly gap-3">
+          {category.posts.map((blog) => (
+            <BlogAuthorsCard blogData={blog} key={category.id} />
+          ))}
+        </div>
       </section>
     </Layout>
   );
