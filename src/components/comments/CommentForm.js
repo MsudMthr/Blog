@@ -45,6 +45,7 @@ const CommentForm = ({ slug }) => {
 
   return (
     <Grid
+      dir="rtl"
       container
       sx={{
         boxShadow: "rgba(0,0,0,0.1) 0px 4px 12px",
@@ -71,6 +72,7 @@ const CommentForm = ({ slug }) => {
           variant="outlined"
           className="w-full"
           name="name"
+          
         />
       </Grid>
       <Grid item xs={12} m={2}>

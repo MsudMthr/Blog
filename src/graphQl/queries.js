@@ -137,6 +137,7 @@ const GET_POST_COMMENTS = gql`
       id
       name
       text
+      feedback
     }
   }
 `;
