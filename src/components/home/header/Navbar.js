@@ -1,9 +1,25 @@
 import Link from "next/link";
 import React from "react";
-
+import { useSession, signIn, signOut } from "next-auth/react";
 const Navbar = () => {
+  const { data: session } = useSession();
   return (
-    <div className="z-50 hidden w-80 items-center justify-between pt-4 md:flex ">
+    <div className="z-50 hidden w-96 items-center justify-between pt-4 md:flex ">
+      {session ? (
+        <button
+          onClick={() => signOut()}
+          className="z-40 rounded-md bg-amber-900/60 px-2 py-1 font-bold text-white backdrop-blur-sm"
+        >
+          خروج از حساب
+        </button>
+      ) : (
+        <button
+          onClick={() => signIn("github")}
+          className="z-40 rounded-md bg-amber-900/60 px-2 py-1 font-bold text-white backdrop-blur-sm"
+        >
+          ورود
+        </button>
+      )}
       <Link href={"/"}>
         <a className="px-2 py-1 text-milkyWhite drop-shadow-xl">خانه</a>
       </Link>

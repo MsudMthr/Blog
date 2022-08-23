@@ -72,7 +72,6 @@ const CommentForm = ({ slug }) => {
           variant="outlined"
           className="w-full"
           name="name"
-          
         />
       </Grid>
       <Grid item xs={12} m={2}>
