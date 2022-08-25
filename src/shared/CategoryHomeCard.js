@@ -3,33 +3,28 @@ import Image from "next/image";
 import Link from "next/link";
 import useAOS from "../hooks/useAOS";
 const CategoryHomeCard = ({ data }) => {
-  const { cover, name } = data;
-
+  const { cover, name, id } = data;
+  console.log(data);
   useAOS();
 
   return (
-    <Link passHref href={"#"} className="flex items-center justify-center">
-      <CardActionArea
-        data-aos="zoom-in"
-        data-aos-duration="1500"
-        className="flex max-w-[120px] cursor-pointer flex-col items-center justify-center gap-2 rounded-md"
-      >
+    <Link
+      passHref
+      href={`/categories/${id}`}
+      className="flex items-center justify-center"
+    >
+      <div className="relative flex cursor-pointer flex-col items-center">
         <Image
           src={cover.url}
           alt={name}
-          className={" rounded-2xl"}
-          width={100}
-          height={100}
+          width={200}
+          height={130}
+          className={"rounded-md "}
         />
-        <Typography
-          variant="h6"
-          component={"p"}
-          fontWeight="700"
-          className=" text-base md:text-xl "
-        >
+        <p className="absolute -bottom-3 w-10/12 rounded-md bg-orange-100/30 text-center font-bold leading-10 backdrop-blur-sm">
           {name}
-        </Typography>
-      </CardActionArea>
+        </p>
+      </div>
     </Link>
   );
 };

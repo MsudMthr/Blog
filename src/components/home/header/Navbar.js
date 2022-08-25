@@ -5,6 +5,18 @@ const Navbar = () => {
   const { data: session } = useSession();
   return (
     <div className="z-50 hidden w-96 items-center justify-between pt-4 md:flex ">
+      <Link href={"/"}>
+        <a className="px-2 py-1 text-milkyWhite drop-shadow-xl">خانه</a>
+      </Link>
+      <Link href={"/blogs"}>
+        <a className="px-2 py-1 text-milkyWhite drop-shadow-xl">مقالات</a>
+      </Link>
+      <Link href={"/authors"}>
+        <a className="px-2 py-1 text-milkyWhite drop-shadow-xl">نویسنده ها</a>
+      </Link>
+      <Link href={"#"}>
+        <a className="px-2 py-1 text-milkyWhite drop-shadow-xl">دسته بندی ها</a>
+      </Link>
       {session ? (
         <button
           onClick={() => signOut()}
@@ -20,18 +32,6 @@ const Navbar = () => {
           ورود
         </button>
       )}
-      <Link href={"/"}>
-        <a className="px-2 py-1 text-milkyWhite drop-shadow-xl">خانه</a>
-      </Link>
-      <Link href={"/blogs"}>
-        <a className="px-2 py-1 text-milkyWhite drop-shadow-xl">مقالات</a>
-      </Link>
-      <Link href={"/authors"}>
-        <a className="px-2 py-1 text-milkyWhite drop-shadow-xl">نویسنده ها</a>
-      </Link>
-      <Link href={"#"}>
-        <a className="px-2 py-1 text-milkyWhite drop-shadow-xl">دسته بندی ها</a>
-      </Link>
     </div>
   );
 };

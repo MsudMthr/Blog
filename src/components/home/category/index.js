@@ -9,7 +9,7 @@ const Category = ({ categories }) => {
       <h1 className="mb-3 self-start text-2xl font-bold text-darkBlue">
         دسته بندی ها
       </h1>
-      <div className="flex  items-center justify-around gap-1 ">
+      <div className="flex  flex-col items-center justify-around gap-3 sm:flex-row ">
         {categories.map((category) => (
           <CategoryHomeCard data={category} key={category.id} />
         ))}
