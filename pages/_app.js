@@ -10,6 +10,7 @@ export const client = new ApolloClient({
 });
 
 function MyApp({ Component, pageProps: { ...pageProps } }) {
+ 
   return (
     <ApolloProvider client={client}>
       <ThemeProvider theme={theme}>

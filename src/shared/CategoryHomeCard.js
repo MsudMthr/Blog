@@ -4,7 +4,6 @@ import Link from "next/link";
 import useAOS from "../hooks/useAOS";
 const CategoryHomeCard = ({ data }) => {
   const { cover, name, id } = data;
-  console.log(data);
   useAOS();
 
   return (

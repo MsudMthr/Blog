@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "src/firebase";
 import { useState } from "react";
+import { setCookie } from "src/helper/coockies";
 const Register = ({ userData, onChange }) => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
@@ -21,7 +22,8 @@ const Register = ({ userData, onChange }) => {
           userData.password
         ).then((res) => {
           setIsLoading(false);
-        //   router.push("/");
+          setCookie("userToken", res.user.uid, 1);
+          router.push("/");
           console.log(res);
         });
       });
