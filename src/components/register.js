@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "@mui/material/Button";
 import { GitHub } from "@mui/icons-material";
 import googleIcon from "/src/assets/google-svgrepo-com.svg";
@@ -6,7 +6,6 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "src/firebase";
-import { useState } from "react";
 import { setCookie } from "src/helper/coockies";
 const Register = ({ userData, onChange }) => {
   const router = useRouter();
@@ -24,7 +23,6 @@ const Register = ({ userData, onChange }) => {
           setIsLoading(false);
           setCookie("userToken", res.user.uid, 1);
           router.push("/");
-          console.log(res);
         });
       });
     }

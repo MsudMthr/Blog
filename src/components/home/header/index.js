@@ -9,8 +9,8 @@ import Image from "next/image";
 import logo from "src/assets/blog logo.png";
 const Header = () => {
   return (
-    <section className="header-background h-[60vh] sm:h-[80vh]  ">
-      <div className="absolute top-0 left-0 z-0 h-[60vh] w-[40%]   bg-gradient-to-r from-black via-black/80 to-white/0 sm:h-[80vh]    "></div>
+    <section className="header-background h-[40vh] sm:h-[80vh]  ">
+      <div className="absolute top-0 left-0 z-0 h-[60vh] hidden md:block  w-[60%]   bg-gradient-to-r from-black via-black/80 to-white/0 sm:h-[80vh]    "></div>
       <div className="z-50 mx-auto flex max-w-screen-xl items-center justify-around">
         <Navbar />
         <div className="z-50 flex w-full items-center justify-around gap-3 md:w-auto ">

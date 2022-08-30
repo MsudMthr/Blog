@@ -4,9 +4,24 @@ import { GitHub } from "@mui/icons-material";
 import googleIcon from "/src/assets/google-svgrepo-com.svg";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { setCookie } from "src/helper/coockies";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "src/firebase";
 
 const Login = ({ userData, onChange }) => {
   const router = useRouter();
+
+  const loginHandler = () => {
+    signInWithEmailAndPassword(auth, userData.email, userData.password)
+      .then((res) => {
+        setCookie("userToken", res.user.uid, 1);
+        router.push("/");
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  };
+
   return (
     <div className=" left-16  top-10   mx-auto flex min-h-[80vh] w-11/12 max-w-md flex-col items-center rounded-md bg-gray-500/30  px-2 py-1 text-center shadow-md shadow-gray-900/80 backdrop-blur-md transition-all duration-200 md:absolute md:w-4/12">
       <h1 className="mt-2 text-xl font-bold text-gray-200">ورود</h1>
@@ -42,7 +57,7 @@ const Login = ({ userData, onChange }) => {
           className="w-full rounded border border-slate-500 bg-transparent  px-3 py-2 text-gray-200 shadow-sm shadow-gray-600 outline-none transition-all duration-200 focus:border-gray-700  focus:shadow-md focus:shadow-gray-900 focus:ring-1 "
         />
       </div>
-      <Button variant="contained" color="primary">
+      <Button variant="contained" color="primary" onClick={loginHandler}>
         ورود
       </Button>
       <div className="mt-5 flex w-11/12 flex-col flex-wrap items-center justify-around gap-2 md:flex-row ">
