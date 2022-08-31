@@ -13,8 +13,14 @@ const BlogCard = ({ blogData }) => {
     slug,
     title,
     published_time,
-    postAuthor
+    postAuthor,
   } = blogData;
+  const options = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
 
   useAOS();
 
@@ -40,17 +46,23 @@ const BlogCard = ({ blogData }) => {
       >
         {title}
       </Typography>
-      <div className="flex  items-center justify-end gap-2">
-        <Typography className="text-xs font-thin text-dark " variant="p">
-          {dateSplitter(published_time)}
+      <div className="flex  items-center justify-between  gap-2 ">
+        <Typography className="text-xs font-thin text-dark  " variant="p">
+          {new Date(published_time).toLocaleDateString("fa-IR", options)}
         </Typography>
-        <Link
-          href={`/authors/${postAuthor.slug}`}
-          className="ml-2 cursor-pointer text-justify text-xs text-dark hover:text-cyan-600 "
-        >
-          <a>{postAuthor.name}</a>
-        </Link>
-        <Avatar alt={postAuthor.name} src={postAuthor.avatar.url} sx={{ width: 32, height: 32 }} />
+        <div className="flex items-center gap-2">
+          <Link
+            href={`/authors/${postAuthor.slug}`}
+            className="ml-2 cursor-pointer text-justify text-xs text-dark hover:text-cyan-600 "
+          >
+            <a>{postAuthor.name}</a>
+          </Link>
+          <Avatar
+            alt={postAuthor.name}
+            src={postAuthor.avatar.url}
+            sx={{ width: 32, height: 32 }}
+          />
+        </div>
       </div>
       <Divider />
 

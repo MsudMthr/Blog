@@ -18,3 +18,19 @@ body {
   background: url("../src/assets/loginPhoto.jpg") center;
   background-size: cover;
 }
+
+.searchBackground {
+  background: url("../src/assets/searchBook\ \(1\).jpg") center;
+  background-size: cover;
+}
+
+.searchBackground::after {
+  content: "";
+  position: absolute;
+  height: 40vh;
+  background: rgba(0, 0, 0, 0.539);
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
